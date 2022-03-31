@@ -30,14 +30,33 @@ const filteringCoins = coins.filter(coin =>
   );
 
 
+
   return (
+ 
+
     <div className="coins-app">
       <div className="coin-search">
-        <h2 className="coin-text">Search for a crypto</h2>
+        <h2 className="coin-text">Search </h2>
+
         <form>
           <input type="text" placeholder='Search'
             className="coin-input" onChange={handleChng}/>
         </form>
+        <table>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Coin</th>
+            <th scope="col">Price</th>
+            <th scope="col">1hr</th>
+            <th scope="col">24h</th>
+            <th scope="col">7d</th>
+            <th scope="col">24h Volume</th>
+            <th scope="col">Mkt Cap</th>
+          </tr>
+          </thead>   
+        </table>
+      
       </div>
        {filteringCoins.map(coin => {
          return(
